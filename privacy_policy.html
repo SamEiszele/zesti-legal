@@ -49,17 +49,17 @@
 </div>
 <div class="container">
   <h1 class="page-title">Privacy Policy</h1>
-  <p class="page-meta">Last updated: April 2026 &nbsp;·&nbsp; Effective: April 2026</p>
+  <p class="page-meta">Last updated: 19 September 2026 &nbsp;·&nbsp; Effective: 19 September 2026</p>
 
   <div class="intro-card">
-    <p>Zesti is built on the principle that you should know what's in your food — and what's in our app. This policy explains clearly what data we collect, why we collect it, and how it's used. We don't sell your data. We don't run ads. Your health preferences stay private.</p>
+    <p>Zesti is built on the principle that you should know what's in your food — and what's in our app. This policy explains clearly what data we collect, why we collect it, and how it's used. We don't sell your data. We don't run ads. If you choose to tell us about health conditions or dietary needs to get more personalised results, that information is never used for anything other than that.</p>
   </div>
 
   <div class="section">
     <div class="section-title">Who We Are</div>
     <div class="card">
-      <p>Zesti Health is a registered business name (ABN 59 695 275 152) operating under the Zesti Health trading name (ABN 59 695 275 152), Queensland, Australia. For privacy enquiries, contact us at <strong>privacy@zesti.app</strong>.</p>
-      <p style="margin-top:10px;">We are subject to the <strong>Privacy Act 1988 (Cth)</strong> and the Australian Privacy Principles (APPs).</p>
+      <p>Zesti Health is a registered business name (ABN 59 695 275 152), Queensland, Australia. For privacy enquiries, contact us at <strong>privacy@zesti.app</strong>.</p>
+      <p style="margin-top:10px;">We are subject to the <strong>Privacy Act 1988 (Cth)</strong> and the Australian Privacy Principles (APPs), and we handle health information in line with the additional obligations those Principles place on "sensitive information."</p>
     </div>
   </div>
 
@@ -70,19 +70,38 @@
       <p>When you create an account, we collect your email address and a securely hashed password. We use Supabase for authentication — your password is never stored in plain text.</p>
     </div>
     <div class="card">
-      <h3>Health preferences</h3>
-      <p>You can optionally enable health preferences (gut health focus, allergen alerts, synthetic colours, artificial sweeteners). These are stored as anonymous preference toggles — not medical conditions. No diagnosis or health condition is ever stored or inferred.</p>
+      <h3>Health preferences (sensitive information)</h3>
+      <p>You can optionally tell Zesti about specific health conditions, allergies, or dietary needs that are relevant to food and ingredients — for example gut conditions such as IBS or Crohn's disease, allergies such as gluten, dairy or soy, or conditions such as ADHD where they are relevant to ingredient flagging. We use this to personalise the ingredient risk scores you see. The exact list of conditions and preferences you can select may expand over time as we add new personalisation options.</p>
+      <p style="margin-top:10px;">This is <strong>health information</strong>, which the Privacy Act treats as "sensitive information" and protects more strictly than ordinary personal information. We only collect it when you take a clear, deliberate action to turn a preference on — see <em>Sensitive Information &amp; Your Consent</em> below for how this works and how to withdraw it.</p>
     </div>
     <div class="card">
       <h3>Scan history</h3>
-      <p>When you scan a product, we store the product name, brand, scan date, and the ingredient score result. This is used to show your scan history within the app. We do not store images of food labels.</p>
+      <p>When you scan a product, we store the product name, brand, scan date, scan method, and the ingredient score result (which may be personalised using your health preferences above). This is used to show your scan history within the app. We do not store images of food labels.</p>
     </div>
     <div class="card">
-      <h3>Device and usage data</h3>
-      <p>We collect basic app usage data (screens visited, features used) to improve the app. This data is aggregated and cannot identify you individually. We do not use advertising trackers.</p>
+      <h3>Ingredient label photos (temporary)</h3>
+      <p>If you use the label-scanning feature, the photo you take is sent to our OCR provider to extract the printed ingredient text (see OpenAI, below), and to our servers to match those ingredients against our database. The photo itself is not retained by Zesti after this processing completes.</p>
+    </div>
+    <div class="card">
+      <h3>Technical and operational data</h3>
+      <p>Our infrastructure providers (Supabase, for our database and servers) automatically generate standard technical logs — such as request timestamps and error logs — for the purpose of operating, securing, and debugging the app. We do not currently use any dedicated analytics or usage-tracking service, and we do not build behavioural profiles from this data. If that changes in the future, we will update this policy first.</p>
     </div>
     <div class="highlight">
-      <p><strong>We do not collect:</strong> your location, contacts, financial information, biometric data, or any information about your actual health conditions or medical history.</p>
+      <p><strong>We do not collect:</strong> your precise location, your contacts, biometric data, or advertising identifiers. We never see your payment details — subscription payments are handled entirely by Apple and RevenueCat (see below).</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Sensitive Information &amp; Your Consent</div>
+    <div class="card">
+      <p>Because health information receives special protection under Australian law, we want to be specific about how this works in Zesti:</p>
+      <ul style="margin-top:10px;">
+        <li>Health preferences are entirely <strong>optional and off by default</strong>. Nothing is inferred or assumed — we only record what you explicitly choose to turn on.</li>
+        <li>Turning a health preference on is a deliberate, informed action, and we treat it as your <strong>consent</strong> to us collecting and using that specific piece of information for the purpose of personalising your ingredient scores.</li>
+        <li>You can review, change, or turn off any health preference at any time from the Profile tab. Turning a preference off stops it from affecting future scans, but does not retroactively change scores already recorded in your existing scan history.</li>
+        <li>We never use your health preferences for advertising, never sell or share them with third parties for their own purposes, and never use them to make any automated decision about you beyond the ingredient scoring you've asked for.</li>
+        <li>Deleting your account (Profile → Delete account) permanently deletes your health preferences along with the rest of your data, as described under Data Retention below.</li>
+      </ul>
     </div>
   </div>
 
@@ -95,40 +114,47 @@
         <li>To maintain your scan history across devices</li>
         <li>To process your subscription via RevenueCat (if you subscribe to Zesti Pro)</li>
         <li>To respond to support enquiries</li>
-        <li>To improve the app based on aggregated usage patterns</li>
+        <li>To operate, secure, and troubleshoot the app</li>
       </ul>
     </div>
     <div class="card">
       <h3>We never use your data to:</h3>
       <ul>
-        <li>Sell to third parties</li>
+        <li>Sell it to third parties</li>
         <li>Target you with advertising</li>
         <li>Build a profile for marketing purposes</li>
-        <li>Make automated decisions about your health</li>
+        <li>Make automated decisions about your health beyond the ingredient scoring you've asked for</li>
       </ul>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-title">Third Party Services</div>
+    <div class="section-title">Third Party Services &amp; Overseas Disclosure</div>
     <div class="card">
-      <h3>Supabase</h3>
-      <p>We use Supabase (hosted in ap-southeast-2, Sydney) for our database and authentication. Your data is stored in Australia. Supabase's privacy policy is available at supabase.com/privacy.</p>
+      <p>Some of your information is necessarily handled by service providers we rely on to run Zesti. Some of these are based overseas, which means your information may be disclosed outside Australia, primarily to the United States. We choose providers with their own privacy and security commitments, but we encourage you to review their policies too.</p>
     </div>
     <div class="card">
-      <h3>RevenueCat</h3>
+      <h3>Supabase (Australia)</h3>
+      <p>We use Supabase (hosted in ap-southeast-2, Sydney) for our database, authentication, and server functions. Your account data, scan history, and health preferences are stored in Australia. Supabase's privacy policy is available at supabase.com/privacy.</p>
+    </div>
+    <div class="card">
+      <h3>OpenAI (United States)</h3>
+      <p>If you use the label-scanning feature, the photo you capture is sent to OpenAI's API (GPT-4o Vision) solely to extract the printed ingredient text from the image. This request is made from our server, not directly from your device. OpenAI's API does not use content submitted through the API to train its models by default, and the image is not retained by Zesti once extraction is complete. OpenAI's privacy policy is available at openai.com/privacy.</p>
+    </div>
+    <div class="card">
+      <h3>RevenueCat (United States)</h3>
       <p>If you subscribe to Zesti Pro, your subscription is processed via RevenueCat. RevenueCat receives your Apple ID transaction information to validate your subscription. RevenueCat's privacy policy is available at revenuecat.com/privacy.</p>
     </div>
     <div class="card">
       <h3>Apple App Store</h3>
-      <p>Zesti is distributed via the Apple App Store. Apple's data practices are governed by Apple's privacy policy at apple.com/privacy.</p>
+      <p>Zesti is distributed via the Apple App Store, and subscription payments are processed by Apple. Apple's data practices are governed by Apple's privacy policy at apple.com/privacy.</p>
     </div>
   </div>
 
   <div class="section">
     <div class="section-title">Data Retention</div>
     <div class="card">
-      <p>We retain your account data for as long as your account is active. If you delete your account, all personal data including your scan history, health preferences, and account information is permanently deleted within 30 days. You can delete your account at any time from the Profile tab in the app.</p>
+      <p>We retain your account data for as long as your account is active. If you delete your account, all personal data — including your scan history, health preferences, and account information — is permanently deleted within 30 days. You can delete your account at any time from the Profile tab in the app.</p>
     </div>
   </div>
 
@@ -140,9 +166,23 @@
         <li>Access the personal information we hold about you</li>
         <li>Request correction of inaccurate information</li>
         <li>Request deletion of your account and data</li>
-        <li>Opt out of any non-essential data collection</li>
-        <li>Lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at oaic.gov.au</li>
+        <li>Withdraw consent to any health preference at any time</li>
+        <li>Lodge a complaint with us first (privacy@zesti.app), and if unresolved, with the Office of the Australian Information Commissioner (OAIC) at oaic.gov.au</li>
       </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Data Breach Notification</div>
+    <div class="card">
+      <p>We take reasonable technical and organisational steps to protect your information, including encryption in transit and at rest through our infrastructure providers. In the unlikely event of a data breach that is likely to result in serious harm, we will notify affected individuals and the OAIC in line with the Notifiable Data Breaches scheme under Part IIIC of the Privacy Act 1988.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Children's Privacy</div>
+    <div class="card">
+      <p>Zesti is not directed at children and is not intended for use by anyone under 13, consistent with our Terms of Service. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us at privacy@zesti.app and we will delete it.</p>
     </div>
   </div>
 
@@ -156,7 +196,7 @@
   <div class="section">
     <div class="section-title">Changes to This Policy</div>
     <div class="card">
-      <p>We may update this policy from time to time. We will notify you of material changes via the app or email. Continued use of Zesti after changes constitutes acceptance of the updated policy.</p>
+      <p>We may update this policy from time to time. We will notify you of material changes — such as a change to what we collect or how we use it — via the app or email before they take effect. Continued use of Zesti after changes take effect constitutes acceptance of the updated policy.</p>
     </div>
   </div>
 
